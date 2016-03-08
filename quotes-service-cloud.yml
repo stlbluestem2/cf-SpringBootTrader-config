@@ -1,0 +1,8 @@
+eureka:
+  instance:
+    nonSecurePort: 80
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+  serviceurl:
+    defaultzone: http://eureka-server-mj.cfapps.io/eureka/
