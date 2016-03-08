@@ -6,3 +6,11 @@ eureka:
     fetchRegistry: true
   serviceurl:
     defaultzone: http://eureka-server-mj.cfapps.io/eureka/
+
+security:
+  basic:
+    enabled: false
+
+management:
+  security:
+    enabled: false

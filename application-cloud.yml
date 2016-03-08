@@ -1,6 +1,6 @@
 eureka:
   instance:
-    hostname: ${vcap.application.uris[0]:localhost}
-    nonSecurePort: ${server.port}
+    hostname: eureka-server-mj.cfapps.io
+    nonSecurePort: 80
     metadataMap:
       instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
