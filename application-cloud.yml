@@ -1,6 +1,19 @@
+security:
+  basic:
+    enabled: false
+
+management:
+  security:
+    enabled: false
+
 eureka:
-  instance:
-    hostname: eureka-server-mj.cfapps.io
-    nonSecurePort: 80
-    metadataMap:
-      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${vcap.services.discovery-service.credentials.uri}/eureka/
+
+spring:
+  cloud:
+    config:
+      uri: ${vcap.services.config-service.credentials.uri}
