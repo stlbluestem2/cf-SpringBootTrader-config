@@ -12,6 +12,9 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: ${vcap.services.discovery-service.credentials.uri}/eureka/
+  instance:
+    hostname: ${vcap.application.uris[0]}
+    nonSecurePort: 80
 
 spring:
   cloud:
